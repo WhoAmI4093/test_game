@@ -2,6 +2,10 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+
+# Builds
+*.zip
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/

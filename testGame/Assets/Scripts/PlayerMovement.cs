@@ -4,32 +4,54 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement current;
+    CanvasUpdate canvasUpdate;
+
+    public float gravity = -9.81f;
+
+    #region moving
     bool previousFrameOnGround = true;
     Vector3 previousFrameMove = Vector3.zero;
 
     public float speed = 5f;
-    public float defaultSpeedMultiplyer = 1;
     float speedMultiplyer = 1;
-
+    public float defaultSpeedMultiplyer = 1;
     public float crouchSpeedMultiplyer = -0.5f;
     public float sprintSpeedMultiplyer = 1.25f;
+    public float sprintStaminaCost = -10f;
+    public float sprintStaminaRequirement = 15f;
 
-    public float gravity = -9.81f;
-    
     public float jumpHeight = 5f;
     public float jumpMultiplyer = 1;
     public Vector3 force;
     public Vector3 move = new Vector3();
-    CharacterController characterController;
 
+    CharacterController characterController;
+    #endregion
+    public float hp = 100f;
+    public float maxHp = 100f;
+    public float stamina = 100f;
+    public float maxStamina = 100f;
+    public float staminaRegenerationSpeed = 1f;
+    public float staminaWaitSecondsToRegenerate = 1f;
+    float staminaLastUpdated;
     void Start()
     {
+        current = this;
+
+        canvasUpdate = CanvasUpdate.current;
+
         characterController = GetComponent<CharacterController>();
+
+        StartCoroutine("staminaRegeneration");
     }
 
     void Update()
     {
-        if (canvasUpdate.current.gamePaused) return;
+        if (canvasUpdate == null) canvasUpdate = CanvasUpdate.current;
+        if (canvasUpdate.gamePaused) return;
+
+        if (current == null) current = this;
 
         bool onGround = Physics.CheckBox(transform.position - Vector3.up * 1, new Vector3(0.25f, 0.01f, 0.25f));
         if (onGround) speedMultiplyer = defaultSpeedMultiplyer;
@@ -57,7 +79,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (onGround) speedMultiplyer *= sprintSpeedMultiplyer;
+            if (onGround && stamina >= sprintStaminaRequirement)
+            {
+                speedMultiplyer *= sprintSpeedMultiplyer;
+                StaminaUpdate(sprintStaminaCost * Time.deltaTime);
+            }
         }
 
         move *= speed * speedMultiplyer;
@@ -86,7 +112,31 @@ public class PlayerMovement : MonoBehaviour
         
         characterController.Move(force * Time.deltaTime);
 
+        if (transform.position.y < 0)
+        {
+            TakeDamage(-1 * Time.deltaTime);
+        }
+
         previousFrameMove = move;
         previousFrameOnGround = onGround;
+    }
+
+    public void TakeDamage(float dmg)
+    {
+        hp = Mathf.Clamp(hp + dmg, 0, maxHp);
+    }
+    public void StaminaUpdate(float value)
+    {
+        stamina = Mathf.Clamp(stamina + value, 0, maxStamina);
+        if (value < 0) staminaLastUpdated = Time.realtimeSinceStartup;
+    }
+    IEnumerator staminaRegeneration()
+    {
+        while (true)
+        {
+            if (Time.realtimeSinceStartup >= staminaLastUpdated + staminaWaitSecondsToRegenerate) 
+                stamina = Mathf.Clamp(stamina + staminaRegenerationSpeed * Time.deltaTime, 0, maxStamina);
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

@@ -298,7 +298,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CameraRotation.cs"
-"Assets/Scripts/canvasUpdate.cs"
+"Assets/Scripts/CanvasUpdate.cs"
 "Assets/Scripts/PlayerMovement.cs"
 -langversion:9.0
 

@@ -5,6 +5,9 @@ using UnityEngine;
 public class CameraRotation : MonoBehaviour
 {
     GameObject player;
+
+    CanvasUpdate canvasUpdate;
+
     public static CameraRotation current;
 
     public float mouseSensitivity = 100f;
@@ -17,6 +20,9 @@ public class CameraRotation : MonoBehaviour
     void Start()
     {
         current = this;
+
+        canvasUpdate = CanvasUpdate.current;
+
         player = transform.parent.gameObject;
         setCursorLock(1);
     }
@@ -24,7 +30,8 @@ public class CameraRotation : MonoBehaviour
     
     void Update()
     {
-        if (canvasUpdate.current.gamePaused) return;
+        if (canvasUpdate == null) canvasUpdate = CanvasUpdate.current;
+        if (canvasUpdate.gamePaused) return;
         if (player == null) player = transform.parent.gameObject;
         
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

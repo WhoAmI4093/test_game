@@ -4,40 +4,60 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class canvasUpdate : MonoBehaviour
+public class CanvasUpdate : MonoBehaviour
 {
     TextMeshProUGUI fps;
-    Image escapeMenu;
-
-    public bool gamePaused = false;
     int DebugEnabled = 0;
 
+    #region bars on screen
+    public float barSpeed = 0.1f;
+    PlayerMovement playerMovement;
+    TextMeshProUGUI hpText;
+    Scrollbar hpBar;
+    TextMeshProUGUI staminaText;
+    Scrollbar staminaBar;
+
+    public IEnumerator hpCoroutine;
+    public IEnumerator staminaCoroutine;
+    #endregion
+
+
+    Image escapeMenu;
+    #region escape fading
+    public bool gamePaused = false;
     public float escapeOpenTimeSeconds = 0.25f;
     public float targetAlpha = 100;
     public float targetBlurSize = 1;
     public int steps = 100;
     Color change;
-    Material blur;
     bool escapeOpened = false;
     bool isFading = false;
+    #endregion
 
-    public static canvasUpdate current;
-
-
-
+    public static CanvasUpdate current;
     void Start()
     {
-        current = this;
+        
 
-        fps = transform.GetChild(2).GetComponent<TextMeshProUGUI>();
         escapeMenu = transform.GetChild(1).GetComponent<Image>();
         escapeMenu.enabled = false;
+        
+        DebugEnabled = PlayerPrefs.GetInt("f3");
+        fps = transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        StartCoroutine("updateFPS");
+
+        playerMovement = PlayerMovement.current;
+        hpText = transform.GetChild(0).GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>();
+        hpBar = hpText.transform.parent.GetComponent<Scrollbar>();
+        staminaText = transform.GetChild(0).GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>();
+        staminaBar = staminaText.transform.parent.GetComponent<Scrollbar>();
+
+        StartCoroutine("moveBarsToValues");
 
         targetAlpha /= 256;
         change = new Color(0, 0, 0, targetAlpha / steps);
 
-        DebugEnabled = PlayerPrefs.GetInt("f3");
-        StartCoroutine("updateFPS");
+        current = this;
 
     }
     void Update()
@@ -58,6 +78,7 @@ public class canvasUpdate : MonoBehaviour
             StartCoroutine("fadeEscape");
         }
         #endregion
+
     }
 
     IEnumerator updateFPS()
@@ -98,5 +119,23 @@ public class canvasUpdate : MonoBehaviour
         else CameraRotation.current.setCursorLock(0);
         isFading = false;
         escapeOpened = !escapeOpened;
+    }
+    IEnumerator moveBarsToValues()
+    {
+        while (true)
+        {
+            float staminaDivision = playerMovement.stamina / playerMovement.maxStamina;
+            float hpDivision = playerMovement.hp / playerMovement.maxHp;
+            string hpTextValue = $"{Mathf.Round(playerMovement.hp)} / {playerMovement.maxHp}";
+            string staminaTextValue = $"{Mathf.Round(playerMovement.stamina)} / {playerMovement.maxStamina}";
+            if (hpText.text != hpTextValue) hpText.text = hpTextValue;
+            if (staminaText.text != staminaTextValue) staminaText.text = staminaTextValue;
+
+            if (hpBar.size != hpDivision)
+                hpBar.size = Mathf.Lerp(hpBar.size, hpDivision, barSpeed);
+            if (staminaBar.size != staminaDivision)
+                staminaBar.size = Mathf.Lerp(staminaBar.size, staminaDivision, barSpeed);
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

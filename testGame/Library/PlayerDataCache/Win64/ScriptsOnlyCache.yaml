@@ -2,8 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraRotation
+    - CanvasUpdate
     - PlayerMovement
-    - canvasUpdate
     Unity.Postprocessing.Runtime.dll:
     - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
     - UnityEngine.Rendering.PostProcessing.AutoExposure
@@ -118,50 +118,46 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1872}
+      Script: {instanceID: 1870}
     - Class: 114
-      Script: {instanceID: 2124}
+      Script: {instanceID: 2122}
     - Class: 114
-      Script: {instanceID: 2154}
+      Script: {instanceID: 2152}
     - Class: 114
-      Script: {instanceID: 2424}
+      Script: {instanceID: 2422}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 2632}
     - Class: 114
-      Script: {instanceID: 2756}
+      Script: {instanceID: 2754}
     - Class: 114
-      Script: {instanceID: 2872}
+      Script: {instanceID: 2870}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2888}
     - Class: 114
-      Script: {instanceID: 2916}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 3046}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3238}
+      Script: {instanceID: 3236}
     - Class: 114
-      Script: {instanceID: 3248}
+      Script: {instanceID: 3246}
     - Class: 114
-      Script: {instanceID: 4214}
+      Script: {instanceID: 4212}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 4348}
     - Class: 114
-      Script: {instanceID: 4634}
+      Script: {instanceID: 4632}
     - Class: 114
-      Script: {instanceID: 4694}
+      Script: {instanceID: 4692}
     - Class: 114
-      Script: {instanceID: 4884}
+      Script: {instanceID: 4882}
     - Class: 114
-      Script: {instanceID: 5032}
+      Script: {instanceID: 5030}
     - Class: 114
-      Script: {instanceID: 19870}
-    - Class: 114
-      Script: {instanceID: 19874}
+      Script: {instanceID: 19868}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -176,8 +172,6 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 213
-      Script: {instanceID: 0}
-    - Class: 215
       Script: {instanceID: 0}
     - Class: 218
       Script: {instanceID: 0}
@@ -362,7 +356,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 956a2e016cb6071d53b836b2bf09738d
+      Hash: 75bdb20b5f86bdfaaf468111dbb8cd75
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -692,10 +686,10 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 5cbbe76380c6d0a98c9698360e8ba5d1
+      Hash: f113bc7fef1f1aa33854e9e343305cad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: canvasUpdate
+    className: CanvasUpdate
   - hash:
       serializedVersion: 2
       Hash: 63d7b9b64a11859f416d72ba9a3c3fec

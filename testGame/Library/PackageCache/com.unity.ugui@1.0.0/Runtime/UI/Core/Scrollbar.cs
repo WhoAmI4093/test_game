@@ -103,7 +103,7 @@ namespace UnityEngine.UI
 
         [Range(0f, 1f)]
         [SerializeField]
-        private float m_Size = -0.2f;
+        private float m_Size = 0.2f;
 
         /// <summary>
         /// The size of the scrollbar handle where 1 means it fills the entire scrollbar.

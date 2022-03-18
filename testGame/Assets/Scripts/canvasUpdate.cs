@@ -7,11 +7,12 @@ using TMPro;
 public class CanvasUpdate : MonoBehaviour
 {
     TextMeshProUGUI fps;
+    PlayerMovement playerMovement;
+    CameraRotation cameraRotation;
     int DebugEnabled = 0;
 
     #region bars on screen
     public float barSpeed = 0.1f;
-    PlayerMovement playerMovement;
     TextMeshProUGUI hpText;
     Scrollbar hpBar;
     TextMeshProUGUI staminaText;
@@ -46,7 +47,9 @@ public class CanvasUpdate : MonoBehaviour
         fps = transform.GetChild(2).GetComponent<TextMeshProUGUI>();
         StartCoroutine("updateFPS");
 
-        playerMovement = PlayerMovement.current;
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        cameraRotation = FindObjectOfType<CameraRotation>();
+
         hpText = transform.GetChild(0).GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>();
         hpBar = hpText.transform.parent.GetComponent<Scrollbar>();
         staminaText = transform.GetChild(0).GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>();
@@ -57,7 +60,6 @@ public class CanvasUpdate : MonoBehaviour
         targetAlpha /= 256;
         change = new Color(0, 0, 0, targetAlpha / steps);
 
-        current = this;
 
     }
     void Update()
@@ -114,9 +116,9 @@ public class CanvasUpdate : MonoBehaviour
         if (escapeOpened)
         {
             escapeMenu.enabled = false;
-            CameraRotation.current.setCursorLock(1);
+            cameraRotation.setCursorLock(1);
         }
-        else CameraRotation.current.setCursorLock(0);
+        else cameraRotation.setCursorLock(0);
         isFading = false;
         escapeOpened = !escapeOpened;
     }

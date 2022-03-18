@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static PlayerMovement current;
     CanvasUpdate canvasUpdate;
 
     public float gravity = -9.81f;
 
     #region moving
+    [SerializeField]
     bool previousFrameOnGround = true;
+    [SerializeField]
+    bool onGround = true;
     Vector3 previousFrameMove = Vector3.zero;
 
     public float speed = 5f;
@@ -23,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float jumpHeight = 5f;
     public float jumpMultiplyer = 1;
+    public float jumpStaminaCost = -5f;
+    public float jumpStaminaRequirement = 5f;
     public Vector3 force;
     public Vector3 move = new Vector3();
 
@@ -37,9 +41,8 @@ public class PlayerMovement : MonoBehaviour
     float staminaLastUpdated;
     void Start()
     {
-        current = this;
 
-        canvasUpdate = CanvasUpdate.current;
+        canvasUpdate = FindObjectOfType<CanvasUpdate>();
 
         characterController = GetComponent<CharacterController>();
 
@@ -51,9 +54,8 @@ public class PlayerMovement : MonoBehaviour
         if (canvasUpdate == null) canvasUpdate = CanvasUpdate.current;
         if (canvasUpdate.gamePaused) return;
 
-        if (current == null) current = this;
 
-        bool onGround = Physics.CheckBox(transform.position - Vector3.up * 1, new Vector3(0.25f, 0.01f, 0.25f));
+        onGround = Physics.CheckBox(transform.position - Vector3.up * 1, new Vector3(0.25f, 0.01f, 0.25f));
         if (onGround) speedMultiplyer = defaultSpeedMultiplyer;
 
         move = Vector3.zero;
@@ -103,18 +105,19 @@ public class PlayerMovement : MonoBehaviour
         
 
         if (onGround && force.y < 0) force.y = 0f;
-        if (Input.GetButton("Jump") && onGround)
+        if (Input.GetButton("Jump") && onGround && stamina > jumpStaminaRequirement)
         {
             force.y = Mathf.Sqrt(jumpHeight * jumpMultiplyer * -2f * gravity);
             force.x = move.x;
             force.z = move.z;
+            StaminaUpdate(jumpStaminaCost);
         }
         
         characterController.Move(force * Time.deltaTime);
 
         if (transform.position.y < 0)
         {
-            TakeDamage(-1 * Time.deltaTime);
+            TakeDamage(-10 * Time.deltaTime);
         }
 
         previousFrameMove = move;

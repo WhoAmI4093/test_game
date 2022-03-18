@@ -8,7 +8,6 @@ public class CameraRotation : MonoBehaviour
 
     CanvasUpdate canvasUpdate;
 
-    public static CameraRotation current;
 
     public float mouseSensitivity = 100f;
     float xRotation = 0f;
@@ -19,9 +18,8 @@ public class CameraRotation : MonoBehaviour
     
     void Start()
     {
-        current = this;
 
-        canvasUpdate = CanvasUpdate.current;
+        canvasUpdate = FindObjectOfType<CanvasUpdate>();
 
         player = transform.parent.gameObject;
         setCursorLock(1);

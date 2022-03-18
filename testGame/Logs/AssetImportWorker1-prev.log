@@ -15,7 +15,7 @@ D:/test_game/testGame
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-58464
+50878
 Successfully changed project path to: D:/test_game/testGame
 D:/test_game/testGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/test_game/testGame
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 46.34 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 80.54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.14f1 (bcb93e5482d2)
 [Subsystems] Discovering subsystems at path D:/unity/2021.2.14f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,199 @@ Initialize mono
 Mono path[0] = 'D:/unity/2021.2.14f1/Editor/Data/Managed'
 Mono path[1] = 'D:/unity/2021.2.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/unity/2021.2.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56956
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56876
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/unity/2021.2.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004541 seconds.
+Registered in 0.006317 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 36.81 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 73.79 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.592 seconds
+- Completed reload, in  0.686 seconds
 Domain Reload Profiling:
-	ReloadAssembly (592ms)
-		BeginReloadAssembly (84ms)
+	ReloadAssembly (686ms)
+		BeginReloadAssembly (100ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (402ms)
-			LoadAssemblies (83ms)
+		EndReloadAssembly (449ms)
+			LoadAssemblies (99ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (110ms)
+			SetupTypeCache (118ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (213ms)
+			SetupLoadedEditorAssemblies (249ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (37ms)
+				RefreshPlugins (74ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (123ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
+				ProcessInitializeOnLoadAttributes (121ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002610 seconds.
+Registered in 0.004962 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000265C5B336D0 doesn't match image D:\test_game\testGame\Library\ScriptAssemblies\Assembly-CSharp.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 76.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.850 seconds
+- Completed reload, in  1.814 seconds
 Domain Reload Profiling:
-	ReloadAssembly (850ms)
-		BeginReloadAssembly (120ms)
+	ReloadAssembly (1815ms)
+		BeginReloadAssembly (135ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (611ms)
-			LoadAssemblies (73ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1542ms)
+			LoadAssemblies (113ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (171ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (293ms)
+			SetupTypeCache (317ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (88ms)
+			SetupLoadedEditorAssemblies (992ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (53ms)
-				ProcessInitializeOnLoadAttributes (201ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				RefreshPlugins (77ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (776ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'multi_compile_instancing __ INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ DOTS_INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ LOD_FADE_CROSSFADE'
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Refreshing native plugins compatible for Editor in 1.86 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1673 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (1.3 MB). Loaded Objects now: 2149.
-Memory consumption went from 96.1 MB to 94.8 MB.
-Total: 3.157000 ms (FindLiveObjects: 0.188200 ms CreateObjectMapping: 0.129000 ms MarkObjects: 2.506700 ms  DeleteObjects: 0.331900 ms)
+Unloading 4531 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 54 unused Assets / (4.7 MB). Loaded Objects now: 4998.
+Memory consumption went from 257.2 MB to 252.5 MB.
+Total: 13.076600 ms (FindLiveObjects: 1.493600 ms CreateObjectMapping: 1.367400 ms MarkObjects: 8.090900 ms  DeleteObjects: 2.120600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 119415.087319 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitDataDisplacement.hlsl
+  artifactKey: Guid(1ee517c3caa96594ca34977000fa20a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitDataDisplacement.hlsl using Guid(1ee517c3caa96594ca34977000fa20a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4041f5a1542a8d1af1d74efafc6db79') in 0.089372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/Lit.cs.hlsl
+  artifactKey: Guid(ee69429b3df477b4391cbf8b40b46a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/Lit.cs.hlsl using Guid(ee69429b3df477b4391cbf8b40b46a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76742a77d2f09f23f1e8f78dc1053f16') in 0.020149 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitBuiltinData.hlsl
+  artifactKey: Guid(b18343016003d0c4aaa0dd7778d3b816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitBuiltinData.hlsl using Guid(b18343016003d0c4aaa0dd7778d3b816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eed0a4501ed213ab360b488cff18284') in 0.013252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitReference.hlsl
+  artifactKey: Guid(0406917314064054eb0ef42f727a8889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitReference.hlsl using Guid(0406917314064054eb0ef42f727a8889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f10d08440e674e031856b0f0e56cc976') in 0.013565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitRaytracing.hlsl
+  artifactKey: Guid(230652a90ee76964c92c6351d508ff9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitRaytracing.hlsl using Guid(230652a90ee76964c92c6351d508ff9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '389c04490b1979b1ca7fd3cf2f3020e8') in 0.014286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitProperties.hlsl
+  artifactKey: Guid(edd4a01243e14f04687542aee1f03b8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitProperties.hlsl using Guid(edd4a01243e14f04687542aee1f03b8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84938a6387936db9daa059a7fea66bb0') in 0.011880 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004855 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.640 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1641ms)
+		BeginReloadAssembly (179ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1367ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (359ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (97ms)
+			SetupLoadedEditorAssemblies (690ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (519ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'multi_compile_instancing __ INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ DOTS_INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ LOD_FADE_CROSSFADE'
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Refreshing native plugins compatible for Editor in 4.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4184 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (4.6 MB). Loaded Objects now: 5000.
+Memory consumption went from 236.7 MB to 232.1 MB.
+Total: 10.528700 ms (FindLiveObjects: 1.115000 ms CreateObjectMapping: 1.041500 ms MarkObjects: 6.197200 ms  DeleteObjects: 2.172300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,12 +269,135 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 3.37 ms, found 2 plugins.
+Registering precompiled user dll's ...
+Registered in 0.004485 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.27 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (1.3 MB). Loaded Objects now: 2149.
-Memory consumption went from 59.5 MB to 58.3 MB.
-Total: 2.810500 ms (FindLiveObjects: 0.176700 ms CreateObjectMapping: 0.119100 ms MarkObjects: 2.310000 ms  DeleteObjects: 0.203900 ms)
+Mono: successfully reloaded assembly
+- Completed reload, in  1.439 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1439ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1197ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (331ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (103ms)
+			SetupLoadedEditorAssemblies (574ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (107ms)
+				ProcessInitializeOnLoadAttributes (407ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'multi_compile_instancing __ INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ DOTS_INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ LOD_FADE_CROSSFADE'
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Refreshing native plugins compatible for Editor in 3.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4184 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (4.6 MB). Loaded Objects now: 5002.
+Memory consumption went from 236.8 MB to 232.1 MB.
+Total: 9.269500 ms (FindLiveObjects: 0.722200 ms CreateObjectMapping: 0.197100 ms MarkObjects: 6.005400 ms  DeleteObjects: 2.342400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 674.020639 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Texture/DecalGizmo.png
+  artifactKey: Guid(b057b73ec5a603e4aa80ccf4b34db0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Texture/DecalGizmo.png using Guid(b057b73ec5a603e4aa80ccf4b34db0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1062c7a2239481fb705c5c75d60ff21') in 0.136951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Texture/ShadowKernelMapping.asset
+  artifactKey: Guid(98a5a16e4aad05b4b8e1c1af5f8e9fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Texture/ShadowKernelMapping.asset using Guid(98a5a16e4aad05b4b8e1c1af5f8e9fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40355aeb6d997756bce289ef163f909e') in 0.111861 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004544 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.474 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1475ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1228ms)
+			LoadAssemblies (128ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (329ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (103ms)
+			SetupLoadedEditorAssemblies (559ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (115ms)
+				ProcessInitializeOnLoadAttributes (397ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'multi_compile_instancing __ INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ DOTS_INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ LOD_FADE_CROSSFADE'
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Refreshing native plugins compatible for Editor in 4.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4185 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (4.6 MB). Loaded Objects now: 5030.
+Memory consumption went from 241.6 MB to 236.9 MB.
+Total: 8.725700 ms (FindLiveObjects: 0.661400 ms CreateObjectMapping: 0.767400 ms MarkObjects: 5.680600 ms  DeleteObjects: 1.614700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -178,17 +411,29 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 1.81 ms, found 2 plugins.
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'multi_compile_instancing __ INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ DOTS_INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ LOD_FADE_CROSSFADE'
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Refreshing native plugins compatible for Editor in 3.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (1.3 MB). Loaded Objects now: 2149.
-Memory consumption went from 59.5 MB to 58.3 MB.
-Total: 2.691500 ms (FindLiveObjects: 0.235100 ms CreateObjectMapping: 0.149300 ms MarkObjects: 2.075100 ms  DeleteObjects: 0.230900 ms)
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (4.6 MB). Loaded Objects now: 5030.
+Memory consumption went from 158.6 MB to 154.0 MB.
+Total: 6.265100 ms (FindLiveObjects: 0.410700 ms CreateObjectMapping: 0.120300 ms MarkObjects: 4.523100 ms  DeleteObjects: 1.209900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:srp/default-shader: 00a0da0d000000000000000000000000 -> 0d000000000000000000000000000000
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -197,50 +442,23 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 2.22 ms, found 2 plugins.
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for pixel shader [0x80070057]
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'multi_compile_instancing __ INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ DOTS_INSTANCING_ON'
+Shader warning in 'HDRP/LayeredLitTessellation': Ignoring duplicate keyword line 'shader_feature _ LOD_FADE_CROSSFADE'
+D3D shader create error for vertex shader [0x80070057]
+D3D shader create error for domain shader [0x80070057]
+Refreshing native plugins compatible for Editor in 4.30 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (1.3 MB). Loaded Objects now: 2149.
-Memory consumption went from 59.5 MB to 58.3 MB.
-Total: 3.944600 ms (FindLiveObjects: 0.198200 ms CreateObjectMapping: 0.156700 ms MarkObjects: 3.305700 ms  DeleteObjects: 0.283200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.85 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (1.3 MB). Loaded Objects now: 2149.
-Memory consumption went from 59.5 MB to 58.3 MB.
-Total: 6.044400 ms (FindLiveObjects: 0.303700 ms CreateObjectMapping: 0.257700 ms MarkObjects: 5.022100 ms  DeleteObjects: 0.459300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.94 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (1.3 MB). Loaded Objects now: 2149.
-Memory consumption went from 59.5 MB to 58.3 MB.
-Total: 3.055600 ms (FindLiveObjects: 0.179400 ms CreateObjectMapping: 0.121300 ms MarkObjects: 2.541200 ms  DeleteObjects: 0.213100 ms)
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (4.6 MB). Loaded Objects now: 5030.
+Memory consumption went from 158.7 MB to 154.0 MB.
+Total: 5.814400 ms (FindLiveObjects: 0.356900 ms CreateObjectMapping: 0.312100 ms MarkObjects: 3.919900 ms  DeleteObjects: 1.224400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
